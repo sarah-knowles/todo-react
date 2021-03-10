@@ -32,9 +32,9 @@ const Form = ({ setInputText, inputText, todos, setTodos, setFilter }) => {
       </button>
       <div className='select'>
         <select onChange={filterHandler} name='todos' className='filter-todo'>
-          <option value='all'>all</option>
-          <option value='completed'>completed</option>
-          <option value='incomplete'>incomplete</option>
+          <option className='select-text'value='all'>all</option>
+          <option className='select-text'value='completed'>completed</option>
+          <option className='select-text'value='incomplete'>incomplete</option>
         </select>
       </div>
     </form>
