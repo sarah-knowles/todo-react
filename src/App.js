@@ -43,8 +43,8 @@ function App() {
     if(localStorage.getItem('todos') === null) {
       localStorage.setItem('todos', JSON.stringify([]));
     } else {
-      localStorage.setItem('todos', JSON.stringify(todos));
-
+     let todoLocal = JSON.parse(localStorage.getItem('todos'));
+      setTodos(todoLocal);
     }
   };
  
@@ -60,6 +60,7 @@ function App() {
       setTodos={setTodos} 
       setInputText={setInputText}
       setFilter={setFilter}
+      filteredTodos={filteredTodos}
       />
 
       <TodoList 
